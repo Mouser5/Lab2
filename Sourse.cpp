@@ -1,5 +1,9 @@
 #include "Header.h"
 
+void Student::Get() {
+	cout << "Academic perfomance:";
+}
+
 void Student::Input() {
 	double _a, _b, _c;
 	string _answer;
@@ -24,14 +28,13 @@ void Student::Input() {
 	Answers.close();
 }
 
-void Student::Output() {
+int Student::Output() {
 	int num = 0;
 	for (int i = 0; i < a.size(); i++) {
 		if (result[i] == answer[i])
 			num++;;
 	}
-	cout << name << "\nNumber of correct answers: " << num << endl;
-	cout << endl;
+	return num;
 }
 
 string Student::Solution() {
@@ -58,13 +61,22 @@ string Student::Solution(double _a, double _b, double _c) {
 	}
 }
 
+void Bad::Get() {
+
+	std::cout << "| " << name << " | " << Output() << " | " << "Academic perfomance: " << "2 |" << std::endl;
+}
+
 Bad::Bad(string _name) {
 	name = _name;
 	Input();
 	for (int i = 0; i < a.size(); i++) {
 		result.push_back(Solution());
 	}
-	Output();
+	Get();
+}
+
+void Averange::Get() {
+	std::cout << "| " << name << " | " << Output() << " | " <<"Academic perfomance: "<< "4 |" << std::endl;
 }
 
 Averange::Averange(string _name) {
@@ -80,7 +92,11 @@ Averange::Averange(string _name) {
 			result.push_back(Solution(a[i], b[i], c[i]));
 		}
 	}
-	Output();
+	Get();
+}
+
+void Excellent::Get() {
+	std::cout << "| " << name << " | " << Output() << " | " << "Academic perfomance: " << "5 |" << std::endl;
 }
 
 Excellent::Excellent(string _name) {
@@ -89,5 +105,5 @@ Excellent::Excellent(string _name) {
 	for (int i = 0; i < a.size(); i++) {
 		result.push_back(Solution(a[i], b[i], c[i]));
 	}
-	Output();
+	Get();
 }
