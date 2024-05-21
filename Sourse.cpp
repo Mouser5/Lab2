@@ -63,14 +63,7 @@ string Student::Solution(double _a, double _b, double _c) {
 
 void Bad::Get() {
 	int temp = Output();	
-	cout << "| " << name << " | " << temp << " | ";
-	if (temp >= a.size() * 0.6) {
-		cout<< "Success   |" << std::endl;
-	}
-	else
-	{
-		cout<< "Unsuccess |" << std::endl;
-	}
+	cout << "| " << name << " | " << temp << " | "<<a.size()<<" |"<<endl;
 }
 
 Bad::Bad(string _name) {
@@ -84,14 +77,7 @@ Bad::Bad(string _name) {
 
 void Averange::Get() {
 	int temp = Output();
-	cout << "| " << name << " | " << temp << " | ";
-	if (temp >= a.size() * 0.6) {
-		cout << "Success   |" << std::endl;
-	}
-	else
-	{
-		cout << "Unsuccess |" << std::endl;
-	}
+	cout << "| " << name << " | " << temp << " | " << a.size() << " |" << endl;
 }
 
 Averange::Averange(string _name) {
@@ -112,14 +98,7 @@ Averange::Averange(string _name) {
 
 void Excellent::Get() {
 	int temp = Output();
-	cout << "| " << name << " | " << temp << " | ";
-	if (temp >= a.size() * 0.6) {
-		cout << "Success   |" << std::endl;
-	}
-	else
-	{
-		cout << "Unsuccess |" << std::endl;
-	}
+	cout << "| " << name << " | " << temp << " | " << a.size() << " |" << endl;
 }
 
 Excellent::Excellent(string _name) {
